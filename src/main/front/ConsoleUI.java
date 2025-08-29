@@ -16,7 +16,7 @@ public class ConsoleUI {
         System.out.print("Digite seu nome: ");
         String nome = input.nextLine();
 
-        System.out.println("Escolha sua classe: 1-Guerreiro 2-Mago 3-Barbaro 4-Feiticeiro 5-Monge 6-Paladino 7-Patrulheiro");
+        System.out.println("Escolha sua classe: \n [1]-Guerreiro \n [2]-Mago \n [3]-Barbaro \n [4]-Feiticeiro \n [5]-Monge \n [6]-Paladino \n [7]-Patrulheiro");
         int classe = input.nextInt();
 
         engine.iniciarJogo(nome, classe);
@@ -25,7 +25,7 @@ public class ConsoleUI {
         while (engine.getJogador().estaVivo() && engine.getInimigoAtual().estaVivo()) {
             mostrarStatus();
 
-            System.out.println("Escolha sua ação: 1-Ataque Físico 2-Ataque Mágico 3-Poção");
+            System.out.println("Escolha sua ação: \n [1]-Ataque Físico \n [2]-Ataque Mágico \n [3]-Poção");
             int escolha = input.nextInt();
 
             int danoCausado = engine.turnoJogador(escolha);
